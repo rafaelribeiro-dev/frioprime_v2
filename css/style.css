@@ -12,7 +12,7 @@
 :root {
   font-size: 62.5%; /* 10px */
 
-  --dark-blue: #264065;
+  --dark-blue: #112437;
   --dark-grey: #484848;
   --primary-blue: #3570ff;
   --second-blue: #3a9ddb;
@@ -30,7 +30,7 @@ body {
 p {
   font-family: 'DM Sans';
   font-weight: 400;
-  color: var(--dark-blue);
+  color: var(--dark-grey);
   font-size: 1.8rem;
 }
 
@@ -118,7 +118,12 @@ header {
   margin-top: 2rem;
 }
 
-#about .section-title p {
+.section-title h3 {
+  text-transform: uppercase;
+  padding-top: 4rem;
+}
+
+.section-title p {
   font-family: 'Sora';
   font-size: 2rem;
   color: var(--primary-blue);
@@ -126,7 +131,7 @@ header {
   line-height: 2rem;
 }
 
-#about p {
+#about .description p {
   font-size: 1.6rem;
   margin-top: 2.4rem;
 }
@@ -135,4 +140,91 @@ header {
   display: flex;
   margin: 0 auto;
   width: 20rem;
+}
+
+#about .budget {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 2.3rem;
+  background: #112437;
+
+  margin-top: 4rem;
+}
+
+#about .budget .button {
+  background-color: var(--green-button);
+  width: 24rem;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+#about .budget .budget-title {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+#services {
+  background: var(--light-grey);
+  padding-bottom: 4rem;
+}
+
+.cards {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+#services .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: var(--pure-white);
+  border-radius: 1.6rem;
+  padding: 2rem 2.6rem;
+}
+#services .card .card-title {
+  color: var(--dark-blue);
+  text-align: center;
+  font-size: 1.6rem;
+}
+#services .card .card-content p {
+  font-size: 1.6rem;
+  font-family: 'DM Sans';
+  text-align: center;
+  color: var(--dark-grey);
+}
+
+#our-clients .logos {
+  margin-top: 4rem;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#our-clients .logos {
+  overflow: hidden;
+  white-space: nowrap;
+
+  margin-bottom: 4rem;
+}
+
+#our-clients .logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+#our-clients .logos-slide img {
+  margin-left: 1.8rem;
+  height: 20.9rem;
+}
+
+#our-clients .logos:hover .logos-slide {
+  animation-play-state: paused;
 }
