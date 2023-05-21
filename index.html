@@ -9,16 +9,29 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- PHOSPHOR ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <title>FrioPrime - Soluções em Refrigeração</title>
 
   </head>
   <body>
     <section id="home">
-    <div class="wrapper">
-      <header>
-        navbar aqui
+    <div class="container">
+      <header class="header">
+        <nav class="navbar">
+          <div class="brand">
+            <span>Frio</span>Prime
+          </div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 10H22" stroke="#3570FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M2 2H22" stroke="#3570FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M2 18L22 18" stroke="#3570FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+            
+        </nav>
       <h1 class="headline">FrioPrime,<br>
         seu ambiente mais confortável 
         com nossos serviços de 
@@ -30,8 +43,7 @@
           proporcionando um ambiente agradável e saudável.
         </p>
         <a href="#" class="button">CONHEÇA NOSSOS SERVIÇOS</a>
-
-        <div class="arrow-down">
+        <div class="arrow-down"> 
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_105_255)">
             <path d="M13.0002 16.172L18.3642 10.808L19.7782 12.222L12.0002 20L4.22217 12.222L5.63617 10.808L11.0002 16.172V4H13.0002V16.172Z" fill="#3570FF"/>
@@ -45,10 +57,29 @@
           </div>
         </div>
       </header>
+      <main>
       </section>
       <section id="about">
-        Usando Tailwind
+        <div class="container">
+          <div class="about-title">
+            <h2>Sobre Nós</h2>
+            <p>
+              Nossa história e <br> comprometimento
+            </p>
+          </div>
+          <p>
+            A Frio Prime é uma empresa especializada em instalação e manutenção de equipamentos de ar condicionado. Fundada em 2019 pelo experiente profissional Rodrigo Bevilacqua, formado pelo Senai e com mais de 19 anos de atuação no mercado, a Frio Prime tem 
+            como objetivo oferecer um serviço Prime aos seus clientes, com excelência e qualidade em todos os serviços prestados. 
+            Nossa empresa se destaca por priorizar a satisfação do cliente e oferecer soluções personalizadas para cada necessidade. Além disso, nossos profissionais estão habilitados a realizar a vistoria exigida pelos órgãos fiscalizadores, garantindo a qualidade do ar interior e o funcionamento eficiente do sistema de ar condicionado.
+          </p>
+          <img src="./assets/images/Logo_Grande.svg" alt="Logotipo pinguim frio prime">
+        </div>
       </section>
+
+      <section id="services">
+        serviços
+      </section>
+    </main>
     <script src="main.js"></script>
     <!-- script[src=main.js] -->
   </body>
