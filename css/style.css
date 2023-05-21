@@ -80,8 +80,7 @@ header {
 }
 
 .hero-section {
-  background: #fff url('/assets/images/background-hero.svg') no-repeat center;
-  background-size: cover;
+  background: #1dc9a0;
 }
 
 .headline {
