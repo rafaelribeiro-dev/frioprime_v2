@@ -80,7 +80,7 @@ header {
 }
 
 .hero-section {
-  background-image: #fff url('/assets/images/background-hero.svg') no-repeat center;
+  background-image: #f3ff url('/assets/images/background-hero.svg') no-repeat center;
   background-size: cover;
 }
 
