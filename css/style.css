@@ -80,7 +80,7 @@ header {
 }
 
 .hero-section {
-  background: #1dc9a0;
+  background: url('/assets/background-hero.png') center;
 }
 
 .headline {
