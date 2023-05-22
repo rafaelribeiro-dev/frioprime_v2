@@ -79,7 +79,8 @@ header {
   border-bottom: 1px solid #82888f;
 }
 
-#home .hero-section {
+#home {
+  background: url(/assets/map.svg);
   height: 100vh;
   width: 100vw;
 }
