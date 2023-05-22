@@ -36,10 +36,6 @@ p {
 
 header {
   height: 100vh;
-  background-image: url(/assets/backgroundhero.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .container {
@@ -84,6 +80,10 @@ header {
 }
 
 .hero-section {
+  background-image: url(../assets/backgroundhero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .headline {
