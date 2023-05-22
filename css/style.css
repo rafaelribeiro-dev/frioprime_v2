@@ -80,7 +80,10 @@ header {
 }
 
 .hero-section {
-  background: var(--green-button) url(/assets/backgroundhero.png) no-repeat;
+  background-image: url(/assets/backgroundhero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .headline {
