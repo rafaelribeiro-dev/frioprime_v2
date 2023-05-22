@@ -80,7 +80,9 @@ header {
 }
 
 .hero-section {
-  background: url('/assets/background-hero.png') center;
+  background: url('/assets/background-hero.png') no-repeat center/cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 .headline {
@@ -184,12 +186,16 @@ header {
   background: var(--pure-white);
   border-radius: 1.6rem;
   padding: 2rem 2.6rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
+
 #services .card .card-title {
   color: var(--dark-blue);
   text-align: center;
   font-size: 1.6rem;
 }
+
 #services .card .card-content p {
   font-size: 1.6rem;
   font-family: 'DM Sans';
@@ -209,6 +215,7 @@ header {
     transform: translateX(-100%);
   }
 }
+
 #our-clients .logos {
   overflow: hidden;
   white-space: nowrap;
@@ -227,4 +234,29 @@ header {
 
 #our-clients .logos:hover .logos-slide {
   animation-play-state: paused;
+}
+
+#contact {
+  background-color: var(--light-grey);
+  padding-bottom: 4rem;
+}
+
+#contact .map-image img {
+  max-width: 33rem;
+}
+
+#contact .back-map {
+  background: var(--pure-white);
+  padding: 1.9rem 1rem 1rem 1rem;
+  margin-top: -1.4rem;
+
+  border-radius: 0 0 1.6rem 1.6rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+#contact .back-map .desc {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
