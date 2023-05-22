@@ -79,8 +79,7 @@ header {
   border-bottom: 1px solid #82888f;
 }
 
-.hero-section {
-  background-image: url(/assets/background-hero.png);
+#home .hero-section {
   height: 100vh;
   width: 100vw;
 }
