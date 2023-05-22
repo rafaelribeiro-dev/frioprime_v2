@@ -80,7 +80,7 @@ header {
 }
 
 .hero-section {
-  background: url(assets/background-hero.png) no-repeat center/cover;
+  background: url(/assets/background-hero.png) no-repeat center/cover;
   height: 100vh;
   width: 100vw;
 }
@@ -242,7 +242,7 @@ header {
 }
 
 #contact .map-image img {
-  max-width: 33rem;
+  max-width: 100%;
 }
 
 #contact .back-map {
