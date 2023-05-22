@@ -80,7 +80,7 @@ header {
 }
 
 .hero-section {
-  background: url(/assets/background-hero.png) no-repeat center/cover;
+  background-image: url(/assets/background-hero.png);
   height: 100vh;
   width: 100vw;
 }
