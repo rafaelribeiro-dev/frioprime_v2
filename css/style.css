@@ -250,6 +250,7 @@ header {
   background: var(--pure-white);
   padding: 1.9rem 1rem 1rem 1rem;
   margin-top: -1.4rem;
+  position: relative;
 
   border-radius: 0 0 1.6rem 1.6rem;
 
@@ -260,4 +261,19 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.input-fake {
+  display: flex;
+  width: 34rem;
+  align-items: center;
+  gap: 1.5rem;
+  position: absolute;
+  height: 4rem;
+  margin: 2rem;
+  padding: 0 1rem;
+  border-radius: 0.8rem;
+  background-color: var(--pure-white);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
