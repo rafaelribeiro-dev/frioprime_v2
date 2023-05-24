@@ -239,44 +239,46 @@ header {
 
 #contact {
   background-color: var(--light-grey);
-  padding-bottom: 4rem;
 }
 
-#contact .map-image img {
-  max-width: 100%;
-}
-
-#contact .back-map {
-  background: var(--pure-white);
-  padding: 1.9rem 1rem 1rem 1rem;
-  margin-top: -1.4rem;
-  position: relative;
-
-  border-radius: 0 0 1.6rem 1.6rem;
-
-  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-}
-
-#contact .back-map .desc {
+.pai {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
 }
 
-.input-fake {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  position: absolute;
-  height: 4rem;
-  margin: 2rem;
-  padding: 0 1rem;
-  border-radius: 0.8rem;
+.primo {
   background-color: var(--pure-white);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  position: absolute;
+  top: 1.6rem;
+  left: 1rem;
+  right: 1rem;
+  align-items: center;
+  padding: 1.5rem 1.3rem;
+  border-radius: 1rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.filho1 {
+  position: relative;
+}
+.filho1 img {
+  display: flex;
+  width: 100%;
+}
+
+.filho2 {
+  background-color: var(--pure-white);
+
+  border-radius: 0 0 1.6rem 1rem;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--pure-white);
 }
 
 footer .social {
+  color: var(--pure-white);
   font-size: 1.8rem;
 }
