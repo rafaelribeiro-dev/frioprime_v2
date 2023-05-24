@@ -239,6 +239,7 @@ header {
 
 #contact {
   background-color: var(--light-grey);
+  padding-bottom: 3rem;
 }
 
 .pai {
@@ -246,7 +247,9 @@ header {
   flex-direction: column;
 }
 
-.primo {
+.input-fake {
+  display: flex;
+  gap: 2rem;
   background-color: var(--pure-white);
   position: absolute;
   top: 1.6rem;
@@ -259,26 +262,76 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-.filho1 {
+
+@keyframes shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.input-fake span::after {
+  content: '';
+  width: 1.5rem;
+  margin-left: 0.5rem;
+
+  border-right: 0.1rem solid var(--dark-blue);
+  animation: 0.9s shine infinite;
+}
+.map-image {
   position: relative;
 }
-.filho1 img {
+.map-image img {
   display: flex;
   width: 100%;
 }
 
-.filho2 {
+.contacts {
+  display: flex;
+  flex-direction: column;
   background-color: var(--pure-white);
-
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
   border-radius: 0 0 1.6rem 1rem;
+  margin-top: -2rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.contacts p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 footer {
+  display: flex;
+  align-items: center;
   background-color: var(--dark-blue);
+  color: var(--pure-white);
+
+  padding-block: 2rem;
+}
+
+footer .brand {
+  font-size: 2.4rem;
   color: var(--pure-white);
 }
 
-footer .social {
-  color: var(--pure-white);
-  font-size: 1.8rem;
+footer .brand span {
+  color: var(--second-blue);
+}
+
+footer .copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+footer .copyright span {
+  font-size: 1.5rem;
 }
