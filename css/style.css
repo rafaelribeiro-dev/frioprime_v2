@@ -50,7 +50,7 @@ header {
 }
 
 .header p {
-  margin-top: 2.4rem;
+  margin-top: 2rem;
 }
 
 .navbar .brand {
@@ -106,10 +106,20 @@ header {
 }
 
 .arrow-down {
-  margin-top: 4rem;
+  margin-top: 1.8rem;
   display: flex;
   justify-content: center;
   cursor: pointer;
+  animation: go-down 1s infinite alternate;
+}
+
+@keyframes go-down {
+  from {
+    transform: translateY(1rem);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 #about {
@@ -286,7 +296,8 @@ header {
 .map-image {
   position: relative;
 }
-.map-image img {
+
+.image img {
   display: flex;
   width: 100%;
 }
@@ -334,4 +345,9 @@ footer .copyright {
 }
 footer .copyright span {
   font-size: 1.5rem;
+}
+
+footer .development a,
+a:visited {
+  color: var(--pure-white);
 }
