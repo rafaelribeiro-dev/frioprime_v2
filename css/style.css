@@ -22,7 +22,10 @@
   --light-grey: #f6f7f7;
   --pure-white: #ffffff;
 }
+html,
 body {
+  width: 100%;
+  height: 100%;
   font-family: 'DM Sans', sans-serif;
   font-family: 'Sora', sans-serif;
 }
@@ -69,7 +72,7 @@ header {
 }
 
 .header .navbar {
-  height: 10rem;
+  height: 8rem;
 
   padding: 4rem 0;
   display: flex;
@@ -110,7 +113,7 @@ header {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  animation: go-down 1s infinite alternate;
+  animation: go-down 0.7s infinite alternate;
 }
 
 @keyframes go-down {
