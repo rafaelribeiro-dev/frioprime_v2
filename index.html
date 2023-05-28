@@ -18,31 +18,45 @@
 
   </head>
   <body>
-    <section id="home" class="hero-section">
-    <div class="container">
-      <header class="header">
-        <nav class="navbar">
-          <div class="brand">
-            <span>Frio</span>Prime
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo"><span>Frio</span>Prime</a>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#home" class="nav-link">Ínicio</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
+            <li class="nav-item"><a href="#our-clients" class="nav-link">Clientes</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+          </ul>
+          <!-- CLOSE BUTTON -->
+          <div class="nav-close">
+            <i class="ph-bold ph-x"></i>
           </div>
-          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 10H22" stroke="#3570FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-            <path d="M2 2H22" stroke="#3570FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-            <path d="M2 18L22 18" stroke="#3570FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
-          </svg>
-            
-        </nav>
-      <h1 class="headline">FrioPrime,<br>
-        seu ambiente mais confortável 
-        com nossos serviços de 
-        climatização.</h1>
-        <p>
-          Oferecemos serviços de climatização personalizados com tecnologia avançada para 
-          garantir conforto térmico e eficiência operacional em ambientes. Nossos serviços 
-          melhoram o conforto térmico e aumentam a produtividade dos ocupantes, 
-          proporcionando um ambiente agradável e saudável.
-        </p>
-        <a href="#" class="button">CONHEÇA NOSSOS SERVIÇOS</a>
+        </div>
+        <!-- TOGGLE BUTTON -->
+        <div class="nav-toggle">
+          <i class="ph-fill ph-list"></i>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main>
+      <section id="home">
+        <div class="container">
+          <h1 class="headline">FrioPrime,<br>
+            seu ambiente mais confortável 
+            com nossos serviços de 
+            climatização.</h1>
+            <p>
+              Oferecemos serviços de climatização personalizados com tecnologia avançada para 
+              garantir conforto térmico e eficiência operacional em ambientes. Nossos serviços 
+              melhoram o conforto térmico e aumentam a produtividade dos ocupantes, 
+              proporcionando um ambiente agradável e saudável.
+            </p>
+            <button class="button"><a href="#contact">CONHEÇA NOSSOS SERVIÇOS</a></button>
+            <!-- <a href="#" class="button">CONHEÇA NOSSOS SERVIÇOS</a> -->
         <div class="arrow-down"> 
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_105_255)">
@@ -56,8 +70,6 @@
             </svg>
           </div>
         </div>
-      </header>
-    <main>
       </section>
       <section id="about">
         <div class="container">
@@ -69,7 +81,7 @@
           </div>
           <div class="description">
             <p>
-              A Frio Prime é uma empresa especializada em instalação e manutenção de equipamentos de ar condicionado. Fundada em 2019 pelo experiente profissional Rodrigo Bevilacqua, formado pelo Senai e com mais de 19 anos de atuação no mercado, a Frio Prime tem 
+              A Frio Prime é uma empresa especializada em instalação e manutenção de equipamentos de ar condicionado. Fundada em 2019 pelo experiente profissional Rodrigo Bevilacqua, formado pelo Senai e com mais de <span data-js="yearsCount"></span> anos de atuação no mercado, a Frio Prime tem 
               como objetivo oferecer um serviço Prime aos seus clientes, com excelência e qualidade em todos os serviços prestados. 
               Nossa empresa se destaca por priorizar a satisfação do cliente e oferecer soluções personalizadas para cada necessidade. Além disso, nossos profissionais estão habilitados a realizar a vistoria exigida pelos órgãos fiscalizadores, garantindo a qualidade do ar interior e o funcionamento eficiente do sistema de ar condicionado.
             </p>
@@ -227,18 +239,19 @@
             <div class="contacts">
               <p class="desc"><i class="ph ph-phone"></i> 11 97069-8545</p>
               <p class="desc"><i class="ph ph-whatsapp-logo"></i>
-              <a href="https://wa.me/5511966978887?text=Olá,%20tudo%20bem?"> 11 96697-8887</a></p>
+                <a href="https://wa.me/5511966978887?text=Olá,%20tudo%20bem?"> 11 96697-8887</a></p>
               <p class="desc"><i class="ph ph-at"></i> contato@frioprime.com.br</p>
+              
             </div>
           </div>
         </div>
       </section>
       <footer>
-       <div class="container">
+      <div class="container">
         <div class="brand"> <span>Frio</span>Prime</div>
         <div class="copyright">Copyright <span>&#169</span> 2023 - Todos os direitos reservados</div>
         <div class="development">Desenvolvido por <a href="http://www.devribeiro.com">DevRibeiro</a></div>
-       </div>
+      </div>
       </footer>
     </main>
     <script src="js/app.js"></script>
@@ -247,23 +260,3 @@
 </html>
 
 
-<!-- 
-
-  <div class="form-contact">formulario</div>
-        <div class="map">
-          <div class="map-image">
-            <div class="container">
-            <div class="input-fake">
-              <i class="ph ph-navigation-arrow"></i>
-              <span>Rua Everton Resca, 235 - Jardim Sapopemba |</span>
-            </div>
-          </div>
-            <img src="assets/map.svg" alt="mapa localização frio prime">
-            <div class="back-map">
-              <p class="desc"><i class="ph ph-phone"></i> 11 97069-8545</p>
-              <p class="desc"><i class="ph ph-whatsapp-logo"></i>
-                <a href="https://wa.me/5511966978887?text=Olá,%20tudo%20bem?"> 11 96697-8887</a></p>
-              <p class="desc"><i class="ph ph-at"></i> contato@frioprime.com.br</p>
-            </div>
-          </div>
- -->
