@@ -34,10 +34,16 @@ const scrollHeader = () => {
     header.classList.add('scroll-header')
     navToggleButton.classList.add('nav-toggle-color')
     navLogo.classList.add('nav-logo-color')
+    navLink.forEach(link => {
+      link.classList.add('color-nav')
+    })
   } else {
     header.classList.remove('scroll-header')
     navToggleButton.classList.remove('nav-toggle-color')
     navLogo.classList.remove('nav-logo-color')
+    navLink.forEach(link => {
+      link.classList.remove('color-nav')
+    })
   }
 }
 document.addEventListener('scroll', scrollHeader)

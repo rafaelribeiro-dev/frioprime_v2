@@ -9,7 +9,7 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 
     <!-- PHOSPHOR ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -25,7 +25,7 @@
           <ul class="nav-list">
             <li class="nav-item"><a href="#home" class="nav-link">Ínicio</a></li>
             <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Servíços</a></li>
             <li class="nav-item"><a href="#our-clients" class="nav-link">Clientes</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
           </ul>
@@ -55,7 +55,7 @@
               melhoram o conforto térmico e aumentam a produtividade dos ocupantes, 
               proporcionando um ambiente agradável e saudável.
             </p>
-            <button class="button"><a href="#contact">CONHEÇA NOSSOS SERVIÇOS</a></button>
+            <button class="button"><a href="#services">CONHEÇA NOSSOS SERVIÇOS</a></button>
             <!-- <a href="#" class="button">CONHEÇA NOSSOS SERVIÇOS</a> -->
         <div class="arrow-down"> 
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,25 +86,26 @@
               Nossa empresa se destaca por priorizar a satisfação do cliente e oferecer soluções personalizadas para cada necessidade. Além disso, nossos profissionais estão habilitados a realizar a vistoria exigida pelos órgãos fiscalizadores, garantindo a qualidade do ar interior e o funcionamento eficiente do sistema de ar condicionado.
             </p>
           </div>
-          <img src="assets/logo.svg" alt="Logotipo pinguim frio prime">
-          
-        </div>
-        <div class="budget">
-          <div class="budget-title">Solicite um orçamento sem compromisso!</div>
-          <a href="#" class="button">Solicitar Orçamento</a>
+          <div class="about-image">
+            <img src="assets/logo.svg" alt="Logotipo pinguim frio prime">
+          </div>
         </div>
       </section>
+      `
+      
 
       <section id="services">
+        <div class="section-title">
+          <div class="container">
+          <h3>Serviços</h3>
+          <p>
+            Entregamos serviços <br> com qualidade
+          </p>
+        </div>
+        </div>
         <div class="container">
-          <div class="section-title">
-            <h3>Serviços</h3>
-            <p>
-              Entregamos serviços <br> com qualidade
-            </p>
-          </div>
           <div class="cards">
-            <div class="card">
+            <div id="eletrica" class="card">
               <div class="card-title">Elétrica</div>
               <div class="card-content">
                 <p>
@@ -118,7 +119,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div id="man-corretiva" class="card">
               <div class="card-title">Manutenção Corretiva</div>
               <div class="card-content">
                 <p>
@@ -132,7 +133,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div id="man-preventiva" class="card">
               <div class="card-title">Manutenção Preventiva</div>
               <div class="card-content">
                 <p>
@@ -146,7 +147,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div id="instalacao" class="card">
               <div class="card-title">Instalação</div>
               <div class="card-content">
                 <p>
@@ -159,7 +160,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div id="higienizacao" class="card">
               <div class="card-title">Higienização</div>
               <div class="card-content">
                 <p>
@@ -173,7 +174,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div id="atuacao" class="card">
               <div class="card-title">Locais de Atuação</div>
               <div class="card-content">
                 <p>

@@ -240,11 +240,13 @@ section {
 .section-title h3 {
   text-transform: uppercase;
   padding-top: 4rem;
+  font-weight: 600;
 }
 
 .section-title p {
   font-family: 'Sora';
   font-size: 2rem;
+  font-weight: 600;
   color: var(--primary-blue);
   margin: 1rem 0 1rem 0;
   line-height: 2rem;
@@ -255,10 +257,9 @@ section {
   margin-top: 2.4rem;
 }
 
-#about img {
-  display: flex;
-  margin: 0 auto;
-  width: 20rem;
+#about .about-image {
+  display: grid;
+  place-content: center;
 }
 
 #about .budget {
@@ -338,7 +339,7 @@ section {
   overflow: hidden;
   white-space: nowrap;
 
-  margin-bottom: 4rem;
+  padding-block: 4rem;
 }
 
 #our-clients .logos-slide {
@@ -457,4 +458,129 @@ footer .copyright span {
 footer .development a,
 footer .development a:visited {
   color: var(--pure-white);
+}
+
+/* ----------- RESPONSIVIDADE --------------*/
+
+@media screen and (min-width: 992px) {
+  .nav-toggle,
+  .nav-close {
+    display: none;
+  }
+
+  .container {
+    margin: auto;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-weight: 600;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6.4rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .nav-link {
+    color: var(--dark-blue);
+  }
+
+  #home .headline {
+    font-size: 4vw;
+    padding-top: 2.5rem;
+
+    background: linear-gradient(
+      150.27deg,
+      var(--dark-blue)-26%,
+      var(--second-blue)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  #home p {
+    font-size: 1.6vw;
+    margin-top: 2rem;
+  }
+  #home button {
+    margin: 2.4rem 0;
+  }
+  .color-nav {
+    color: #f6f7f7;
+  }
+
+  .color-nav {
+    color: #f6f7f7;
+  }
+  #about {
+    background-color: #112437;
+    display: grid;
+  }
+  #about .section-title {
+    background-color: #484848;
+  }
+  #about .description {
+    background-color: #1dc9a0;
+    font-size: 10rem;
+  }
+  #about .about-image {
+    background-color: #43bcff;
+  }
+
+  #services {
+    background-image: url(../assets/dots.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #services .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 15rem 22rem 2fr;
+    gap: 2rem;
+    grid-template-areas:
+      'eletrica eletrica corretiva preventiva'
+      'instalacao higienizacao corretiva preventiva'
+      'instalacao higienizacao atuacao atuacao';
+  }
+
+  #eletrica {
+    grid-area: eletrica;
+    place-content: center;
+  }
+
+  #eletrica .card-content {
+    padding-inline: 8.5rem;
+  }
+
+  #man-corretiva {
+    grid-area: corretiva;
+  }
+  #man-preventiva {
+    grid-area: preventiva;
+  }
+  #instalacao {
+    grid-area: instalacao;
+  }
+  #higienizacao {
+    grid-area: higienizacao;
+  }
+  #atuacao {
+    grid-area: atuacao;
+    place-content: center;
+  }
+  #atuacao .card-content {
+    padding-inline: 7.5rem;
+  }
 }
