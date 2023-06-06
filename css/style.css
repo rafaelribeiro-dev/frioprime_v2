@@ -505,7 +505,30 @@ footer .development a:visited {
 
 /* ----------- RESPONSIVIDADE --------------*/
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 990px) {
+  /* Estilos para tablets em modo retrato */
+
+  #home {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(228, 160, 14, 0.5),
+        rgba(242, 247, 252, 0)
+      ),
+      url('../assets/backgroundhero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: linear-gradient(
+      140.27deg,
+      var(--dark-blue),
+      var(--second-blue)
+    );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
   .section-title p {
     /* margin-bottom: 5rem; */
     font-size: 3rem;
