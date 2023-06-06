@@ -33,7 +33,7 @@ body {
   --light-grey: #f6f7f7;
   --pure-white: #ffffff;
 
-  --border-radius: 1rem;
+  --border-radius: 1.6rem;
   --border-color: #d1d1d6;
   --nav-height: 5rem;
 }
@@ -46,7 +46,7 @@ p {
 }
 
 section {
-  padding-block: calc(2rem + var(--nav-height));
+  padding-block: calc(1rem + var(--nav-height));
 }
 
 .container {
@@ -55,8 +55,7 @@ section {
   margin-inline: 2.4rem;
 }
 
-.button,
-.button a {
+.button {
   padding: 2rem 2rem;
   background-color: var(--primary-blue);
   border-radius: var(--border-radius);
@@ -64,6 +63,11 @@ section {
   color: var(--pure-white);
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button a {
+  color: var(--pure-white);
 }
 
 .section-title h3 {
@@ -271,6 +275,10 @@ section {
   text-align: center;
 }
 
+#about .get-budget button {
+  background: var(--green-button);
+}
+
 #services {
   background: var(--light-grey);
 }
@@ -357,6 +365,7 @@ textarea {
   font-size: 1.6rem;
   padding: 1rem;
 }
+
 #contact button {
   width: 100%;
   margin-bottom: 2.4rem;
@@ -367,7 +376,7 @@ input,
 textarea {
   margin-bottom: 1.5rem;
   border: 0.1rem solid var(--border-color);
-  border-radius: var(--border-radius);
+  border-radius: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -496,7 +505,7 @@ footer .development a:visited {
 
 /* ----------- RESPONSIVIDADE --------------*/
 
-@media screen and (min-width: 992px) {
+@media (min-width: 1024px) {
   .section-title p {
     /* margin-bottom: 5rem; */
     font-size: 3rem;
@@ -537,10 +546,12 @@ footer .development a:visited {
   }
   .nav-link {
     color: var(--dark-blue);
+    display: flex;
+    align-items: center;
   }
 
   #home .headline {
-    font-size: 4.5vw;
+    font-size: 6.5rem;
     padding-top: 2.5rem;
 
     background: linear-gradient(
@@ -553,7 +564,7 @@ footer .development a:visited {
     color: transparent;
   }
   #home p {
-    font-size: 1.3vw;
+    font-size: 2.3rem;
     margin-top: 2rem;
   }
   #home button {
@@ -582,7 +593,7 @@ footer .development a:visited {
     grid-area: col-l;
   }
   #about .description p {
-    font-size: 1.3vw;
+    font-size: 1.8rem;
   }
   #about .about-image {
     grid-area: col-r;
@@ -721,7 +732,7 @@ footer .development a:visited {
   textarea {
     margin-bottom: 1.5rem;
     border: 0.1rem solid var(--border-color);
-    border-radius: var(--border-radius);
+    border-radius: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
   }
 
