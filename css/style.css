@@ -50,9 +50,9 @@ section {
 }
 
 .container {
-  max-width: 1120px;
-  /* padding: 0 2.3rem; */
-  margin-inline: 2.4rem;
+  width: min(70rem, 100%);
+  margin: auto;
+  padding-inline: 2.4rem;
 }
 
 .button {
@@ -91,6 +91,7 @@ section {
   top: 0;
   left: 0;
   z-index: 100;
+  padding-inline: 2.4rem;
   transition: background 0.4s;
 }
 
@@ -276,6 +277,7 @@ section {
 }
 
 #about .get-budget button {
+  margin: 0 auto;
   background: var(--green-button);
 }
 
@@ -293,6 +295,7 @@ section {
 #services .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.2rem;
   background: var(--pure-white);
   border-radius: var(--border-radius);
@@ -505,30 +508,48 @@ footer .development a:visited {
 
 /* ----------- RESPONSIVIDADE --------------*/
 
-@media (min-width: 768px) and (max-width: 990px) {
-  /* Estilos para tablets em modo retrato */
-
-  #home {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(228, 160, 14, 0.5),
-        rgba(242, 247, 252, 0)
-      ),
-      url('../assets/backgroundhero.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: linear-gradient(
+@media (min-width: 768px) and (max-width: 1024px) {
+  #home .headline {
+    font-size: 5.2rem;
+    font-weight: 800;
+    background: linear-gradient(
       140.27deg,
       var(--dark-blue),
       var(--second-blue)
     );
-    height: 100vh;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 2.4rem;
+  }
+
+  #home button {
     display: flex;
-    flex-direction: column;
+    width: 50%;
+    margin: 2.4rem 50;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #about .get-budget button {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #contact button {
+    width: 50%;
+    margin-left: 50%;
+  }
+  #contact .contacts p {
+    font-size: 1.5rem;
   }
 }
-@media (min-width: 992px) {
+
+@media (min-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
   .section-title p {
     /* margin-bottom: 5rem; */
     font-size: 3rem;
@@ -540,7 +561,8 @@ footer .development a:visited {
     font-size: 1.4rem;
   }
   .container {
-    margin: auto;
+    width: min(120rem, 100%);
+    /* margin: auto; */
   }
   .nav-toggle,
   .nav-close {
@@ -592,7 +614,7 @@ footer .development a:visited {
   }
   #home button {
     width: 30%;
-    margin: 2rem 0;
+    margin: 4rem 0;
   }
   .color-nav {
     color: #f6f7f7;
@@ -658,7 +680,7 @@ footer .development a:visited {
   #services .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 15rem 22rem;
+    grid-template-rows: 2fr 15rem 28rem;
     gap: 2rem;
     grid-template-areas:
       'eletrica eletrica corretiva preventiva'
@@ -701,7 +723,7 @@ footer .development a:visited {
     grid-template-areas:
       'header header'
       'col-left col-right';
-    column-gap: 2rem;
+    /* column-gap: 2rem; */
   }
 
   #contact .section-title {
@@ -720,7 +742,7 @@ footer .development a:visited {
     padding-top: 4rem;
     justify-content: space-between;
     flex-direction: row;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
   }
 
   #contact p i {
