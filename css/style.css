@@ -193,18 +193,26 @@ section {
       rgba(184, 211, 255, 0.5),
       rgba(242, 247, 252, 0)
     ),
-    url('../assets/backgroundhero.png');
+    url('../assets/backgroundhero_1.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: linear-gradient(
+  /* background-color: linear-gradient(
     140.27deg,
     var(--dark-blue),
     var(--second-blue)
-  );
+  ); */
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+#home:after {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(242, 247, 252, 0) rgba(184, 211, 255, 0.5)
+    ),
+    url('../assets/backgroundhero.png');
 }
 
 #home button {
@@ -374,7 +382,10 @@ textarea {
   margin-bottom: 2.4rem;
   background-color: var(--green-button);
 }
-
+#contact button:disabled {
+  cursor: not-allowed;
+  background-color: #555b69;
+}
 input,
 textarea {
   margin-bottom: 1.5rem;
@@ -540,6 +551,7 @@ footer .development a:visited {
     width: 50%;
     margin-left: 50%;
   }
+
   #contact .contacts p {
     font-size: 1.5rem;
   }
