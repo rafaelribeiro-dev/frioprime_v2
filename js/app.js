@@ -60,71 +60,43 @@ const showServiceYears = year => {
 
 showServiceYears(baseDate)
 
-class FormSubmit {
-  constructor(settings) {
-    this.settings = settings
-    this.form = document.querySelector(settings.form)
-    this.button = document.querySelector(settings.button)
+function handleSubmit(event) {
+  const success = document.querySelector('.success')
+  const warning = document.querySelector('.warning')
+  event.preventDefault() // Impede o envio do formulário padrão
 
-    if (this.form) {
-      this.url = this.form.getAttributes('action')
-    }
-    this.sendForm = this.sendForm.bind(this)
-  }
+  // Obtém os dados do formulário
+  var form = event.target
+  var formData = new FormData(form)
 
-  displaySuccess() {
-    this.form.innerHTML = this.settings.success
-  }
+  // Envia os dados do formulário usando Fetch API
+  fetch(form.action, {
+    method: form.method,
+    body: formData
+  })
+    .then(function (response) {
+      if (form.target.value === '') {
+        warning.classList.add('active')
+      }
+      // Exibe a mensagem de sucesso ou erro
+      if (response.ok) {
+        success.style.opacity = 1
+        success.classList.add('active')
 
-  displayError() {
-    this.form.innerHTML = this.displayError
-  }
-
-  getFormObject() {
-    const formObject = {}
-    const fields = this.form.querySelectorAll('[name]')
-    fields.forEach(field => {
-      formObject[field.getAttributes('name')] = field.value
+        setTimeout(function () {
+          success.style.opacity = 0
+          success.classList.remove('active')
+          form.reset()
+        }, 4000) // Aguarda 0,5 segundos após a transição antes de ocultar completamente
+      } else {
+        warning.style.display = 'block'
+      }
     })
-    return formObject
-  }
+    .catch(function (error) {
+      // Exibe a mensagem de erro
+      warning.style.display = 'block'
+      warning.innerText = error
+    })
 
-  onSubmission(event) {
-    event.preventDefault()
-    event.target.disabled = true
-    event.target.innetText = 'Enviando...'
-  }
-
-  async sendForm(event) {
-    try {
-      this.onSubmission(event)
-      await fetch(this.url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json'
-        },
-        body: JSON.stringify(this.getFormObject())
-      })
-      this.displaySuccess()
-    } catch (error) {
-      this.displayError()
-      throw new Error(error)
-    }
-  }
-
-  init() {
-    if (this.form)
-      this.formButton.addEventListener('click', () => this.sendForm())
-    return this
-  }
+  return false // Impede o envio do formulário padrão
 }
-
-const formSubmit = new FormSubmit({
-  form: '[data-form]',
-  button: '[data-button]',
-  success: "<h3 class='success'> Mensagem Enviada!</h3>",
-  error: "<h3 class='error'>Não foi possível enviar sua mensagem.</h3>"
-})
-
-formSubmit.init()

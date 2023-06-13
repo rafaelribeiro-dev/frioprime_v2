@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- ICONE FAVORITOS -->
+    <link rel="icon" type="image/x-icon" href="./assets/ico_fp.png" />
 
     <!-- PHOSPHOR ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -239,7 +241,10 @@
                 Em que podemos ajudá-lo <br> hoje?
               </p>
             </div>
-            <form action="https://formsubmit.co/rafaelr.alves@yahoo.com.br" method="POST" data-form>
+            <form id="handleFormSubmit" action="https://formsubmit.co/rafaelr.alves@yahoo.com.br" method="POST" 
+              onsubmit="return handleSubmit(event)">
+              <input type="hidden" name="_captcha" value="false">
+
               <label for="nome">Nome</label>
               <input type="text" name="nome"  id="nome" required>
               <label for="email">E-mail</label>
@@ -248,7 +253,11 @@
               <input type="assunto" name="assunto" id="assunto" required>
               <label for="mensagem">Mensagem</label>
               <textarea name="mensagem" id="mensagem" required></textarea>
-              <button class="button" type="submit" data-button>Enviar</button>
+              <div class="message">
+                <div class="success" id="success">Sua mensagem foi enviada com sucesso!</div>
+                <div class="warning" id="danger">Os campos precisam ser preenchidos</div>
+              </div>
+              <button id="send-button" class="button" type="submit">Enviar</button>
             </form>
           </div>
           <div class="col-right">

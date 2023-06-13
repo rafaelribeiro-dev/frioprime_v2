@@ -379,7 +379,7 @@ textarea {
 
 #contact button {
   width: 100%;
-  margin-bottom: 2.4rem;
+  margin-block: 1.6rem;
   background-color: var(--green-button);
 }
 #contact button:disabled {
@@ -410,7 +410,7 @@ label {
 textarea {
   min-height: 16.5rem;
   resize: none;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 
 .input-fake {
@@ -517,6 +517,55 @@ footer .development a:visited {
   color: var(--pure-white);
 }
 
+.success,
+.warning {
+  text-align: center;
+}
+
+.success {
+  background-color: #d1e7dd;
+  font-size: 1.6rem;
+  color: #0a3622;
+  opacity: 0;
+
+  padding: 0.5rem;
+  border: 1px solid #a3cfbb;
+  border-radius: 0.5rem;
+  transform: translateY(70%);
+  transition: all 0.9s ease-in-out;
+}
+
+.success.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.warning {
+  background-color: #fff3cd;
+  font-size: 1.6rem;
+  color: #664d03;
+  transition: buttons 0.9s ease-in-out;
+  display: none;
+  padding: 0.5rem;
+  border: 1px solid #ffe69c;
+  border-radius: 0.5rem;
+  transform: translateY(70%);
+  transition: all 0.9s ease-in-out;
+}
+
+@keyframes bottomBar {
+  0% {
+    transform: translateY(90%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 /* ----------- RESPONSIVIDADE --------------*/
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -547,9 +596,15 @@ footer .development a:visited {
     margin: 0 auto;
   }
 
-  #contact button {
-    width: 50%;
-    margin-left: 50%;
+  #services .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 2fr 15rem 28rem; */
+    gap: 2rem;
+    grid-template-areas:
+      'eletrica corretiva'
+      'preventiva instalacao'
+      'higienizacao atuacao';
   }
 
   #contact .contacts p {
@@ -668,6 +723,7 @@ footer .development a:visited {
     padding: 5rem;
     align-items: center;
     width: 100%;
+    margin-top: 6rem;
   }
 
   .get-budget p {
@@ -781,8 +837,7 @@ footer .development a:visited {
   }
   #contact button {
     background-color: var(--green-button);
-    width: 50%;
-    margin-left: 50%;
+    margin-top: 1.8rem;
   }
 
   input,
@@ -809,11 +864,11 @@ footer .development a:visited {
   textarea {
     min-height: 16.5rem;
     resize: none;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
 
   footer .container {
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     flex-direction: row;
     align-items: center;
