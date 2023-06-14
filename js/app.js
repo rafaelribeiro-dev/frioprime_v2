@@ -83,6 +83,10 @@ function handleSubmit(event) {
         success.style.opacity = 1
         success.classList.add('active')
 
+        setTimeout(() => {
+          success.innerText = 'Enviado, Obrigado!'
+        }, 3000)
+
         setTimeout(function () {
           success.style.opacity = 0
           success.classList.remove('active')

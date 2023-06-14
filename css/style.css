@@ -379,7 +379,8 @@ textarea {
 
 #contact button {
   width: 100%;
-  margin-block: 1.6rem;
+  margin-top: -2rem;
+  margin-bottom: 1.6rem;
   background-color: var(--green-button);
 }
 #contact button:disabled {
@@ -535,9 +536,11 @@ footer .development a:visited {
   transition: all 0.9s ease-in-out;
 }
 
-.success.active {
+.success.active,
+.warning.active {
   opacity: 1;
   transform: translateY(0);
+  margin-bottom: 3rem;
 }
 
 .warning {
@@ -663,7 +666,7 @@ footer .development a:visited {
   }
 
   #home .headline {
-    font-size: 6.5rem;
+    font-size: 5.8rem;
     padding-top: 2.5rem;
 
     background: linear-gradient(
@@ -676,7 +679,7 @@ footer .development a:visited {
     color: transparent;
   }
   #home p {
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-top: 2rem;
   }
   #home button {
@@ -837,7 +840,9 @@ footer .development a:visited {
   }
   #contact button {
     background-color: var(--green-button);
-    margin-top: 1.8rem;
+    /* margin-top: 1.8rem; */
+    position: relative;
+    z-index: 999;
   }
 
   input,
@@ -877,5 +882,11 @@ footer .development a:visited {
 
   .development a {
     font-weight: 600;
+  }
+}
+
+@media (min-width: 1440px) {
+  #home .headline {
+    font-size: 6.8rem;
   }
 }
