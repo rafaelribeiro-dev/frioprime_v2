@@ -58,7 +58,7 @@ section {
 .button {
   padding: 2rem 2rem;
   background-color: var(--primary-blue);
-  border-radius: var(--border-radius);
+  border-radius: 1rem;
   border: none;
   color: var(--pure-white);
   font-weight: 600;
