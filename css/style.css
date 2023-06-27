@@ -27,7 +27,7 @@ body {
   --dark-grey: #484848;
   --primary-blue: #3570ff;
   --second-blue: #3a9ddb;
-  --light-blue: #43bcff;
+  --light-blue: #0a49a8;
   --green-button: #1dc9a0;
   --white-bg: #f9fafe;
   --light-grey: #f6f7f7;
@@ -56,7 +56,7 @@ section {
 }
 
 .button {
-  padding: 2rem 2rem;
+  /* padding: 2rem 2rem; */
   background-color: var(--primary-blue);
   border-radius: 1rem;
   border: none;
@@ -68,11 +68,15 @@ section {
 
 .button a {
   color: var(--pure-white);
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: block;
 }
 
 .section-title h3 {
   text-transform: uppercase;
-  padding-top: 4rem;
+  padding-top: 6rem;
   font-weight: 600;
 }
 
@@ -112,7 +116,7 @@ section {
 }
 
 .nav-logo {
-  font-size: 2rem;
+  font-size: 2.8rem;
   color: var(--dark-blue);
   font-weight: 600;
 }
@@ -121,10 +125,7 @@ section {
 }
 
 .nav-logo span {
-  background: var(--light-blue);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--primary-blue);
 }
 
 .nav-toggle,
@@ -166,6 +167,7 @@ section {
   row-gap: 4rem;
 
   font-size: 2rem;
+  transition: all 0.5s;
 }
 
 .nav-link {
@@ -222,6 +224,10 @@ section {
 
 #home button a {
   color: var(--pure-white);
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
 }
 
 #home .headline {
@@ -266,6 +272,7 @@ section {
 #about .about-image {
   display: grid;
   place-content: center;
+  margin-top: 2rem;
 }
 .get-budget {
   background: linear-gradient(45deg, var(--dark-blue), #133d68);
@@ -277,6 +284,18 @@ section {
   gap: 2rem;
   padding: 2rem;
 }
+
+.operation {
+  background: var(--pure-white);
+  border-radius: var(--border-radius);
+  margin-top: 3rem;
+  margin-bottom: -15rem;
+  display: flex;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
 .get-budget p {
   color: var(--pure-white);
   font-size: 2rem;
@@ -284,9 +303,21 @@ section {
   text-align: center;
 }
 
+.operation {
+  height: 18rem;
+}
+
 #about .get-budget button {
+  width: 100%;
   margin: 0 auto;
   background: var(--green-button);
+  transition: all 0.5s ease;
+}
+
+#about .get-budget button:hover {
+  transform: translateY(-0.5rem);
+  transition: all 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 #services {
@@ -298,12 +329,13 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
+  margin-bottom: 4rem;
 }
 
 #services .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.2rem;
   background: var(--pure-white);
   border-radius: var(--border-radius);
@@ -379,9 +411,12 @@ textarea {
 
 #contact button {
   width: 100%;
+  height: 5rem;
   margin-top: -2rem;
   margin-bottom: 1.6rem;
   background-color: var(--green-button);
+  z-index: 999;
+  position: relative;
 }
 #contact button:disabled {
   cursor: not-allowed;
@@ -500,7 +535,7 @@ footer .container {
 }
 
 footer .brand span {
-  color: var(--second-blue);
+  color: var(--primary-blue);
 }
 
 footer .copyright {
@@ -659,10 +694,18 @@ footer .development a:visited {
     font-size: 1.6rem;
     font-weight: 400;
   }
+
   .nav-link {
     color: var(--dark-blue);
     display: flex;
     align-items: center;
+    transition: all 0.5s;
+  }
+
+  .nav-link:hover {
+    transform: translateY(-0.5rem);
+    transition: all 0.5s;
+    color: var(--primary-blue);
   }
 
   #home .headline {
@@ -685,6 +728,13 @@ footer .development a:visited {
   #home button {
     width: 30%;
     margin: 4rem 0;
+    transition: all 0.5s;
+  }
+
+  #home button:hover {
+    transform: translateY(-0.5rem);
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   }
   .color-nav {
     color: #f6f7f7;
@@ -712,10 +762,14 @@ footer .development a:visited {
   }
   #about .about-image {
     grid-area: col-r;
+    margin-top: 0;
   }
 
   #about .about-image img {
-    width: 24rem;
+    width: 50rem;
+  }
+  #about .get-budget button {
+    width: 36%;
   }
 
   .get-budget {
@@ -733,6 +787,7 @@ footer .development a:visited {
     color: var(--pure-white);
     font-size: 3rem;
     font-weight: 600;
+    margin: auto;
   }
 
   #services {
@@ -751,7 +806,7 @@ footer .development a:visited {
   #services .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 15rem 28rem;
+    grid-template-rows: 2fr 22rem 30rem;
     gap: 2rem;
     grid-template-areas:
       'eletrica eletrica corretiva preventiva'
@@ -843,6 +898,14 @@ footer .development a:visited {
     /* margin-top: 1.8rem; */
     position: relative;
     z-index: 999;
+    padding: 2rem;
+    transition: all 0.5s ease;
+  }
+
+  #contact button:hover {
+    transform: translateY(-0.5rem);
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   }
 
   input,
@@ -885,8 +948,12 @@ footer .development a:visited {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
   #home .headline {
     font-size: 6.8rem;
+  }
+
+  #services .cards {
+    grid-template-rows: 2fr 18rem 24rem;
   }
 }

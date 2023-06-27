@@ -1,6 +1,3 @@
-const copySlide = document.querySelector('.logos-slide').cloneNode(true)
-const logos = document.querySelector('.logos').appendChild(copySlide)
-
 const navMenu = document.querySelector('.nav-menu')
 const navToggle = document.querySelector('.nav-toggle')
 const navClose = document.querySelector('.nav-close')
@@ -34,6 +31,7 @@ const scrollHeader = () => {
     header.classList.add('scroll-header')
     navToggleButton.classList.add('nav-toggle-color')
     navLogo.classList.add('nav-logo-color')
+
     navLink.forEach(link => {
       link.classList.add('color-nav')
     })
@@ -60,6 +58,14 @@ const showServiceYears = year => {
 
 showServiceYears(baseDate)
 
+function setInputBudget() {
+  const input = document.getElementById('assunto')
+  input.value = 'Solicito Orçamento'
+}
+
+const copySlide = document.querySelector('.logos-slide').cloneNode(true)
+const logos = document.querySelector('.logos').appendChild(copySlide)
+
 function handleSubmit(event) {
   const success = document.querySelector('.success')
   const warning = document.querySelector('.warning')
@@ -84,8 +90,8 @@ function handleSubmit(event) {
         success.classList.add('active')
 
         setTimeout(() => {
-          success.innerText = 'Enviado, Obrigado!'
-        }, 3000)
+          success.innerText = 'Mensagem enviada, Obrigado!'
+        }, 2000)
 
         setTimeout(function () {
           success.style.opacity = 0
