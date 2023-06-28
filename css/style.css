@@ -305,7 +305,7 @@ section {
 
 .operation {
   width: 100%;
-  height: 18rem;
+
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -320,13 +320,16 @@ section {
 .operation .images {
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  padding-top: 3rem;
 }
 
 .operation .images img {
-  width: 7.8rem;
+  width: 7rem;
 }
 
 #about .get-budget button {
