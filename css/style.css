@@ -313,16 +313,18 @@ section {
 }
 
 .operation .title {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-align: center;
+  color: var(--primary-blue);
+  font-weight: 600;
 }
 
 .operation .images {
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
+  gap: 4rem;
+  justify-content: center;
   align-items: center;
   margin: auto;
   padding-top: 3rem;
@@ -330,6 +332,19 @@ section {
 
 .operation .images img {
   width: 7rem;
+}
+
+.operation .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.operation .icon span {
+  font-size: 1.4rem;
+  color: var(--dark-grey);
 }
 
 #about .get-budget button {
@@ -675,6 +690,8 @@ footer .development a:visited {
   }
 }
 
+/*-------------------- RESPONSIVIDADE --------------------*/
+
 @media (min-width: 1024px) {
   body {
     overflow: auto;
@@ -980,5 +997,10 @@ footer .development a:visited {
 
   #services .cards {
     grid-template-rows: 2fr 18rem 24rem;
+  }
+
+  .operation .images {
+    display: flex;
+    gap: 6rem;
   }
 }
