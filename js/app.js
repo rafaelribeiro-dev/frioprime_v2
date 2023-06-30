@@ -110,3 +110,15 @@ function handleSubmit(event) {
 
   return false // Impede o envio do formulário padrão
 }
+
+const toTopButton = document.querySelector('.scrollTop')
+
+window.onscroll = function () {
+  this.scrollY >= 1000
+    ? toTopButton.classList.add('show')
+    : toTopButton.classList.remove('show')
+}
+
+toTopButton.addEventListener('click', () => {
+  scrollTo(0, 0)
+})

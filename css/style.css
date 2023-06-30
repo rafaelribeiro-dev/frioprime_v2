@@ -49,6 +49,22 @@ section {
   padding-block: calc(1rem + var(--nav-height));
 }
 
+.scrollTop {
+  position: fixed;
+  bottom: 4rem;
+  right: -6rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  background-color: var(--primary-blue);
+  z-index: 99;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.scrollTop.show {
+  right: 6rem;
+}
+
 .container {
   width: min(70rem, 100%);
   margin: auto;
