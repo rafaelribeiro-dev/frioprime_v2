@@ -51,18 +51,25 @@ section {
 
 .scrollTop {
   position: fixed;
-  bottom: 4rem;
-  right: -6rem;
+  bottom: -6rem;
+  right: 3rem;
   padding: 1.5rem;
   cursor: pointer;
   background-color: var(--primary-blue);
   z-index: 99;
   border-radius: 50%;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-out;
+  opacity: 0;
 }
 
 .scrollTop.show {
-  right: 6rem;
+  bottom: 3rem;
+  opacity: 1;
+}
+
+.scrollTop.show:hover {
+  transform: translateY(-0.5rem);
+  transition: all 0.3s ease-out;
 }
 
 .container {
@@ -321,7 +328,6 @@ section {
 
 .operation {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -348,6 +354,7 @@ section {
 
 .operation .images img {
   width: 7rem;
+  transition: all 0.5s ease;
 }
 
 .operation .icon {
@@ -361,6 +368,11 @@ section {
 .operation .icon span {
   font-size: 1.4rem;
   color: var(--dark-grey);
+}
+
+.operation .icon img:hover {
+  transform: translateY(-0.8rem);
+  transition: all 0.5s ease;
 }
 
 #about .get-budget button {
