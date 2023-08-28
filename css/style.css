@@ -416,6 +416,7 @@ section {
   color: var(--dark-blue);
   text-align: center;
   font-size: 1.6rem;
+  font-weight: 600;
 }
 
 #services .card .card-content p {
