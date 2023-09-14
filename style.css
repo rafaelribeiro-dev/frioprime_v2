@@ -267,6 +267,7 @@ section {
   display: flex;
   justify-content: center;
   animation: go-down 0.7s infinite alternate;
+  margin-top: 3rem;
 }
 
 @keyframes go-down {

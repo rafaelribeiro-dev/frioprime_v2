@@ -256,13 +256,163 @@ tl.from('.nav-logo', time, {
     },
     '-=.9'
   )
-  .from(
-    '',
-    time,
+
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from('#about .section-title h3', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#about .section-title h3',
+    start: 'top 100%'
+  }
+})
+gsap.from('#about .section-title p', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#about .section-title p',
+    start: 'top 95%'
+  }
+})
+gsap.from('.description', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.description',
+    start: 'top 100%'
+  }
+})
+
+gsap.from('.about-image', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.about-image',
+    start: 'top 95%'
+  }
+})
+
+gsap.from('.get-budget', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.get-budget',
+    start: 'top 95%'
+  }
+})
+
+gsap.from('#services .section-title h3', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#services .section-title h3',
+    start: 'top 100%'
+  }
+})
+gsap.from('#services .section-title p', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#services .section-title p',
+    start: 'top 95%'
+  }
+})
+
+// ANIMANDO OS CARDS DA SESSAO SERVICOS
+
+const cards = document.querySelectorAll('.cards .card')
+
+cards.forEach((card, i) => {
+  gsap.from(
+    card,
+    3,
     {
-      y: -100,
+      y: 100,
       opacity: 0,
-      ease: 'circ.out'
+      ease: 'expo.out',
+      delay: i * 0.1,
+      scrollTrigger: {
+        trigger: '.cards .card',
+        start: 'top 65%'
+      }
     },
-    '-=1.5'
+    '-=.4'
   )
+})
+
+const icons = document.querySelectorAll('.images .icon')
+
+icons.forEach((icon, i) => {
+  gsap.from(
+    icon,
+    0.6,
+    {
+      y: 100,
+      opacity: 0,
+      ease: 'back.out(1.7)',
+      delay: i * 0.1,
+      scrollTrigger: {
+        trigger: '.images',
+        start: 'top 80%'
+      }
+    },
+    '-=.4'
+  )
+})
+
+gsap.from('#our-clients .section-title h3', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#our-clients .section-title h3',
+    start: 'top 100%'
+  }
+})
+gsap.from('#our-clients .section-title p', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#our-clients .section-title p',
+    start: 'top 95%'
+  }
+})
+
+gsap.from('#contact .section-title h3', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#contact .section-title h3',
+    start: 'top 100%'
+  }
+})
+gsap.from('#contact .section-title p', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#contact .section-title p',
+    start: 'top 95%'
+  }
+})
