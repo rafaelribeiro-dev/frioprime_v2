@@ -783,7 +783,7 @@ footer .development a:visited {
 
   #home .headline {
     font-size: 5.8rem;
-    padding-top: 2.5rem;
+    /* padding-top: 2.5rem; */
 
     background: linear-gradient(
       150.27deg,
@@ -796,7 +796,7 @@ footer .development a:visited {
   }
   #home p {
     font-size: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 5rem;
   }
   #home button {
     width: 30%;

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,14 +59,13 @@
             seu ambiente mais confortável 
             com nossos serviços de 
             climatização.</h1>
-            <p>
+            <p class="hero-text">
               Oferecemos serviços de climatização personalizados com tecnologia avançada para 
               garantir conforto térmico e eficiência operacional em ambientes. Nossos serviços 
               melhoram o conforto térmico e aumentam a produtividade dos ocupantes, 
               proporcionando um ambiente agradável e saudável.
             </p>
-            <button class="button"><a href="#services">CONHEÇA NOSSOS SERVIÇOS</a></button>
-            <!-- <a href="#" class="button">CONHEÇA NOSSOS SERVIÇOS</a> -->
+
         <div class="arrow-down"> 
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_105_255)">
@@ -103,7 +102,7 @@
 
           <div class="get-budget">
             <p>Solicite um orçamento sem compromisso!</p>
-            <button class="button" id="getBudget" form="handleFormSubmit" onclick="setInputBudget()"><a href="#contact">Solicitar Orçamento</a></button>
+            <button class="button getBudget" id="getBudget" form="handleFormSubmit" onclick="setInputBudget()"><a href="#contact">Solicitar Orçamento</a></button>
           </div>
 
         </div>
@@ -323,7 +322,8 @@
       </div>
       </footer>
     </main>
-    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="./js/app.js"></script>
     <!-- script[src=main.js] -->
   </body>
 </html>

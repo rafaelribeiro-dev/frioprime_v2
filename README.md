@@ -12,4 +12,4 @@ HTML5 | CSS3 | JAVASCRIPT
 
 ## Live Demo
 
-[FRIOPRIME](https://www.frioprime.com.br)
+[FRIOPRIME](https://github.com/rafaelribeiro-dev/frioprime_v2)

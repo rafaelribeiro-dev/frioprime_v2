@@ -145,3 +145,124 @@ window.onscroll = function () {
 toTopButton.addEventListener('click', () => {
   scrollTo(0, 0)
 })
+
+// gsap.from('.nav-logo', {
+//   y: -100,
+//   opacity: 0,
+//   delay: 0.5,
+//   duration: 1.5,
+//   ease: 'expo.out'
+// })
+
+let tl = gsap.timeline()
+
+const navItems = document.querySelectorAll('.nav-item')
+const time = 1
+
+tl.from('.nav-logo', time, {
+  y: -100,
+  opacity: 0,
+  ease: 'circ.out',
+  delay: 1
+})
+  .from(
+    navItems[0],
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.65'
+  )
+  .from(
+    navItems[1],
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.65'
+  )
+  .from(
+    navItems[2],
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.65'
+  )
+  .from(
+    navItems[3],
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.65'
+  )
+  .from(
+    navItems[4],
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.65'
+  )
+  .from(
+    '.ph-instagram-logo',
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.65'
+  )
+
+  .from(
+    '.headline',
+    time,
+    {
+      y: 100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=1.5'
+  )
+  .from(
+    '.hero-text',
+    time,
+    {
+      y: 100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=1.2'
+  )
+  .from(
+    '.arrow-down',
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=.9'
+  )
+  .from(
+    '',
+    time,
+    {
+      y: -100,
+      opacity: 0,
+      ease: 'circ.out'
+    },
+    '-=1.5'
+  )
