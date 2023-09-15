@@ -254,7 +254,7 @@ tl.from('.nav-logo', time, {
       opacity: 0,
       ease: 'circ.out'
     },
-    '-=.9'
+    '-=.5'
   )
 
 gsap.registerPlugin(ScrollTrigger)
@@ -413,6 +413,28 @@ gsap.from('#contact .section-title p', {
   duration: 2,
   scrollTrigger: {
     trigger: '#contact .section-title p',
+    start: 'top 100%'
+  }
+})
+
+gsap.from('.map-image', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.map-image',
+    start: 'top 95%'
+  }
+})
+
+gsap.from('#handleFormSubmit', {
+  y: 100,
+  opacity: 0,
+  ease: 'expo.out',
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#handleFormSubmit',
     start: 'top 95%'
   }
 })
