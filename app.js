@@ -146,14 +146,6 @@ toTopButton.addEventListener('click', () => {
   scrollTo(0, 0)
 })
 
-// gsap.from('.nav-logo', {
-//   y: -100,
-//   opacity: 0,
-//   delay: 0.5,
-//   duration: 1.5,
-//   ease: 'expo.out'
-// })
-
 let tl = gsap.timeline()
 
 const navItems = document.querySelectorAll('.nav-item')
